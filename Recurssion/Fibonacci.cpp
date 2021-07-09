@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-int16_t fib(int n)
+int fib(int n)
 {
     if(n==1||n==0)
     {

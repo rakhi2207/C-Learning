@@ -5,23 +5,24 @@ int main(){
     int a;
     cout<<"Enter a no";
     cin>>a;
-    bool check=false;
-    for(int j=2;j<=a;j++){
-        for(int i=2;i<=(j/2);i++)
+
+        for(int i=2;i<=a;i++)
+        {
+         int count=0;   
+         for(int j=2;j*j<=i;j++)
             {
-                if(j%i==0)
+                
+                if(i%j==0)
                 {
-                    check=true;
-                    cout<<j<<" is not prime\n";
+                    count++;        
                     break;
                 }
+        
             }
-        if(check==false)
-        {
-            cout<<j<<" is prime\n";
+            if(count==0)
+            {
+                cout<<i<<"\n";
+            }
         }
-        check=false;
-    }
-
     return 0;
 }
